@@ -100,5 +100,6 @@ for label in ax.get_xticklabels():
     label.set_rotation(30)
 
 #g.fig.autofmt_xdate()
-plt.suptitle("Trollduction Image Rebuild")
+plt.subplots_adjust(top=0.9, bottom=0.1)
+g.fig.suptitle("Trollduction Image Rebuild")
 plt.show()
