@@ -3,6 +3,7 @@ import re
 from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
 import seaborn as sns
 import matplotlib.dates as mdates
 import numpy as np
@@ -102,4 +103,12 @@ for label in ax.get_xticklabels():
 #g.fig.autofmt_xdate()
 plt.subplots_adjust(top=0.9, bottom=0.1)
 g.fig.suptitle("Trollduction Image Rebuild")
+plt.show()
+
+ax = sns.violinplot(x='day', data=df)
+ax.set_xlabel = "Day of week"
+formatter = mticker.FixedFormatter(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'])
+ax.xaxis.set_major_formatter(formatter)
+dayOfWeek={0:'Monday', 1:'Tuesday', 2:'Wednesday', 3:'Thursday', 4:'Friday', 5:'Saturday', 6:'Sunday'}
+
 plt.show()
