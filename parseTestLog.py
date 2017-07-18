@@ -80,12 +80,13 @@ ax2.set_ylabel('# Failures')
 ax2.set_ylim(0,24)
 ax1.set_xlabel('')
 ax2.set_xlabel('')
-ax1.set_ylabel('Runtime (s)')
+ax1.set_ylabel('Runtime (m)')
 plt.suptitle("Trollduction Image Rebuild")
 # assign locator and formatter for the xaxis ticks.
 
 # put the labels at 45deg since they tend to be too long
 fig.autofmt_xdate()
+plt.savefig('p1.png')
 
 #plt.show()
 
@@ -100,6 +101,7 @@ ax.set_ylabel('Runtime (s)')
 for label in ax.get_xticklabels():
     label.set_rotation(30)
 
+#plt.savefig('p2.png')
 #g.fig.autofmt_xdate()
 plt.subplots_adjust(top=0.9, bottom=0.1)
 g.fig.suptitle("Trollduction Image Rebuild")
@@ -111,4 +113,5 @@ formatter = mticker.FixedFormatter(['Monday', 'Tuesday', 'Wednesday', 'Thursday'
 ax.xaxis.set_major_formatter(formatter)
 dayOfWeek={0:'Monday', 1:'Tuesday', 2:'Wednesday', 3:'Thursday', 4:'Friday', 5:'Saturday', 6:'Sunday'}
 
+#plt.savefig('violin.png')
 plt.show()
